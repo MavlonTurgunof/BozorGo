@@ -11,7 +11,7 @@ function Button({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${className}`}
+      className={`px-[48px] py-[16px] rounded-sm ${className}`}
       {...props}
     >
       {children}

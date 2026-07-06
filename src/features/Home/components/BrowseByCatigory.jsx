@@ -74,6 +74,8 @@ function BrowseByCatigory() {
           </div>
         ))}
       </div>
+
+      <div className="border-[#b3b3b3] border-b mt-15 mb-20" />
     </div>
   );
 }

@@ -187,7 +187,7 @@ function FlashSales() {
         ))}
       </div>
       <div className="flex flex-row  justify-center">
-        <Button className="bg-[#DB4444] text-white font-medium text-[16px] px-12 py-4 rounded-sm flex">
+        <Button className="bg-[#DB4444] text-white font-medium text-[16px] rounded-sm flex">
           View All Products
         </Button>
       </div>
