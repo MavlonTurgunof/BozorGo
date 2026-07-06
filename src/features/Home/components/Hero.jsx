@@ -5,7 +5,7 @@ import arrow from "../../../assets/icons/arrow-right.svg";
 function Hero() {
   return (
     <div className="flex flex-row ">
-      <div className="border-r-2 border-[#b3b3b3]">
+      <div className="border-r-1 border-[#b3b3b3]">
         <ul className="flex flex-col gap-4 whitespace-nowrap mt-10 mr-4 ">
           <li>Woman's Fashion</li>
           <li>Men's Fashion</li>

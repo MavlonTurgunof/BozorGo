@@ -186,7 +186,12 @@ function FlashSales() {
           />
         ))}
       </div>
-      <Button className="bg-[#e07575] ">View All Products</Button>
+      <div className="flex flex-row  justify-center">
+        <Button className="bg-[#DB4444] text-white font-medium text-[16px] px-12 py-4 rounded-sm flex">
+          View All Products
+        </Button>
+      </div>
+      <div className="border-[#b3b3b3] border-b mt-15 mb-20" />
     </div>
   );
 }

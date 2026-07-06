@@ -7,7 +7,7 @@ import Container from "./Container";
 
 function Navbar() {
   return (
-    <div className="pt-[47px] pb-[23px] border-[#b3b3b3] border-b-2">
+    <div className="pt-[47px] pb-[23px] border-[#b3b3b3] border-b">
       <Container>
         <div className="flex flex-row items-center justify-between ">
           <h1 className="font-bold text-2xl">Exclusive</h1>
