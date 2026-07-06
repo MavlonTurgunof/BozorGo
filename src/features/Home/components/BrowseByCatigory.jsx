@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import left from "../../../assets/icons/Vector (3).svg";
 import right from "../../../assets/icons/Vector (4).svg";
 import Phone from "../../../assets/icons/Category-CellPhone.svg";
@@ -9,10 +9,29 @@ import HeadPhone from "../../../assets/icons/Category-HeadPhone.svg";
 import SmartWatch from "../../../assets/icons/Category-SmartWatch.svg";
 
 function BrowseByCatigory() {
+  const sliderRef = useRef(null);
+
+  const scrollLeft = () => {
+    sliderRef.current.scrollBy({
+      left: -300,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    sliderRef.current.scrollBy({
+      left: 300,
+      behavior: "smooth",
+    });
+  };
+
   const CategoriesList = [
     { icon: Phone, name: "Phones" },
     { icon: Computer, name: "Computers" },
     { icon: SmartWatch, name: "SmartWatch" },
+    { icon: Camera, name: "Camera" },
+    { icon: HeadPhone, name: "HeadPhones" },
+    { icon: GamePad, name: "Gaming" },
     { icon: Camera, name: "Camera" },
     { icon: HeadPhone, name: "HeadPhones" },
     { icon: GamePad, name: "Gaming" },
@@ -29,14 +48,14 @@ function BrowseByCatigory() {
         <h1 className="text-[36px] font-semibold">Browse By Category</h1>
         <div className="flex gap-3">
           <button
-            //   onClick={scrollLeft}
+            onClick={scrollLeft}
             className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition"
           >
             <img src={left} alt="" />
           </button>
 
           <button
-            //   onClick={scrollRight}
+            onClick={scrollRight}
             className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition"
           >
             <img src={right} alt="" />
@@ -44,9 +63,12 @@ function BrowseByCatigory() {
         </div>
       </div>
 
-      <div className="flex flex-row gap-[30px]">
+      <div
+        ref={sliderRef}
+        className="flex flex-row gap-[30px] overflow-x-auto scroll-smooth scrollbar-hide"
+      >
         {CategoriesList.map((catg) => (
-          <div className="flex flex-col items-center border border-[#b3b3b3] w-[170px] pt-[25px] pb-[24px]">
+          <div className="shrink-0 flex flex-col items-center border border-[#b3b3b3] w-[170px] pt-[25px] pb-[24px]">
             <img src={catg.icon} alt="" className="mb-4 w-[56px] h-[56px]" />
             <h1>{catg.name}</h1>
           </div>
